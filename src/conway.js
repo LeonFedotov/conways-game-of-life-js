@@ -24,9 +24,9 @@ export default class Life {
         return this;
     }
 
-    getCoord(y, x) { return wrapArray(wrapArray(this.board, y), x); }
+    getCoord({y, x}) { return wrapArray(wrapArray(this.board, y), x); }
     isAlive({x ,y}) {
-        const wasAlive = this.getCoord(y, x);
+        const wasAlive = this.getCoord({y, x});
         const aliveNeigbours = this.getSquare({x, y}).reduce(((sum, cell) => sum + (cell?1:0)), 0);
         return wasAlive ? (
             aliveNeigbours == 2 ? 1 :
@@ -39,9 +39,9 @@ export default class Life {
 
     getSquare({x, y}) {
         return [
-            this.getCoord(y-1, x-1), this.getCoord(y-1, x), this.getCoord(y-1, x+1),
-            this.getCoord(y,   x-1), 0/*self dont count*/, this.getCoord(y,   x+1),
-            this.getCoord(y+1, x-1), this.getCoord(y+1, x), this.getCoord(y+1, x+1),
+            this.getCoord({ y: y-1, x: x-1 }), this.getCoord({ y: y-1, x: x }), this.getCoord({ y: y-1, x: x+1 }),
+            this.getCoord({ y: y,   x: x-1 }), 0/*self dont co un t*/         , this.getCoord({ y: y,   x: x+1 }),
+            this.getCoord({ y: y+1, x: x-1 }), this.getCoord({ y: y+1, x: x }), this.getCoord({ y: y+1, x: x+1 }),
         ];
     }
     next() {
