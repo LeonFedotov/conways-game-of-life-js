@@ -1,0 +1,3 @@
+[submodule "resources/react-pixie"]
+	path = resources/react-pixie
+	url = git@github.com:Izzimach/react-pixi.git
