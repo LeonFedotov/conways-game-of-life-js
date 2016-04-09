@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import Life from './conway';
-import Screen from './pixi-screen';
+import Screen from './art-screen';
 
 class LifeGame extends Component {
 	interval = false

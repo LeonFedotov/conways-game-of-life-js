@@ -1,3 +1,6 @@
 [submodule "resources/react-pixie"]
 	path = resources/react-pixie
 	url = git@github.com:Izzimach/react-pixi.git
+[submodule "resources/react-pixie-boilerplate"]
+	path = resources/react-pixie-boilerplate
+	url = git@github.com:brigand/react-pixi-boilerplate.git
