@@ -4,7 +4,6 @@ import Life from './conway';
 import Screen from './art-screen';
 
 class LifeGame extends Component {
-	interval = false
 	timeout = 500
 	state = {
 		text: '',
@@ -14,17 +13,14 @@ class LifeGame extends Component {
 	next = () => {
 		this.setState({board: this.props.life.next().board });
 	}
-	timeoutChange = ({target}) => {
-		this.stop();
-		this.timeout = target.value;
-	}
 
-	start = (timeout = this.timeout) => {
+
+	start = () => {
 		this.tick = () => {
-          this.next()
-          this.tick && requestAnimationFrame(this.tick);
-        };
-        this.tick();
+          		this.next()
+          		this.tick && requestAnimationFrame(this.tick);
+        	};
+        	this.tick();
 	}
 	stop = () => { this.tick = undefined; }
 	set = ({x, y}) => this.setState({
@@ -40,7 +36,7 @@ class LifeGame extends Component {
 		return (
 			<screen>
 				<menu>
-					<button onClick={this.clear}>clssear</button>
+					<button onClick={this.clear}>clear</button>
 					<button onClick={this.random}>random</button>
 					<button onClick={this.next}>next gen</button>
 					<button onClick={this.start}>start</button>
