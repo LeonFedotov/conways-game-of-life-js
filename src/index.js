@@ -6,7 +6,6 @@ import Screen from './art-screen';
 class LifeGame extends Component {
 	timeout = 500
 	state = {
-		text: '',
 		board: this.props.life.board
 	}
 
