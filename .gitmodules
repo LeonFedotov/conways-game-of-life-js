@@ -4,3 +4,6 @@
 [submodule "resources/react-pixie-boilerplate"]
 	path = resources/react-pixie-boilerplate
 	url = git@github.com:brigand/react-pixi-boilerplate.git
+[submodule "resources/react-transform-boilerplate"]
+	path = resources/react-transform-boilerplate
+	url = git@github.com:gaearon/react-transform-boilerplate.git
